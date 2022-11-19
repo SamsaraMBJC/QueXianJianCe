@@ -1,0 +1,8 @@
+E:\DI_QueXianShiJueJianCe\Pytorch\yolov5-pytorch-main\yolov5-pytorch-main\VOCdevkit/VOC2007/JPEGImages/DJI_0633_06_05.jpg 221,254,23,250,28,0 303,97,22,109,25,0 338,27,20,52,24,0 45,59,87,111,0,1
+E:\DI_QueXianShiJueJianCe\Pytorch\yolov5-pytorch-main\yolov5-pytorch-main\VOCdevkit/VOC2007/JPEGImages/DJI_0633_07_04.jpg 548,315,26,109,28,0
+E:\DI_QueXianShiJueJianCe\Pytorch\yolov5-pytorch-main\yolov5-pytorch-main\VOCdevkit/VOC2007/JPEGImages/DJI_0633_07_05.jpg 79,121,24,268,30,0
+E:\DI_QueXianShiJueJianCe\Pytorch\yolov5-pytorch-main\yolov5-pytorch-main\VOCdevkit/VOC2007/JPEGImages/DJI_0633_08_03.jpg 337,254,10,12,28,1 352,308,7,9,0,1 300,300,7,15,32,1
+E:\DI_QueXianShiJueJianCe\Pytorch\yolov5-pytorch-main\yolov5-pytorch-main\VOCdevkit/VOC2007/JPEGImages/DJI_0633_08_04.jpg 388,185,41,407,30,0
+E:\DI_QueXianShiJueJianCe\Pytorch\yolov5-pytorch-main\yolov5-pytorch-main\VOCdevkit/VOC2007/JPEGImages/DJI_0680_02_04.jpg 178,125,52,34,0,1
+E:\DI_QueXianShiJueJianCe\Pytorch\yolov5-pytorch-main\yolov5-pytorch-main\VOCdevkit/VOC2007/JPEGImages/DJI_0680_04_07.jpg 375,342,21,11,0,1 367,365,26,10,0,1
+E:\DI_QueXianShiJueJianCe\Pytorch\yolov5-pytorch-main\yolov5-pytorch-main\VOCdevkit/VOC2007/JPEGImages/DJI_0680_05_04.jpg 227,280,155,52,154,1

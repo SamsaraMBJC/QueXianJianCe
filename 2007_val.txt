@@ -1,0 +1,1 @@
+E:\DI_QueXianShiJueJianCe\Pytorch\yolov5-pytorch-main\yolov5-pytorch-main\VOCdevkit/VOC2007/JPEGImages/DJI_0680_01_04.jpg 94,123,28,25,0,1 67,41,29,22,0,1
