@@ -14,6 +14,8 @@ import torch
 import torch.backends.cudnn as cudnn
 from PIL import Image
 from yolo import YOLO
+import os
+from tqdm import tqdm
 
 FILE = Path(__file__).resolve()
 ROOT = FILE.parents[0]  # YOLOv5 root directory
@@ -36,7 +38,22 @@ class v5detect:
         r_image = self.model.detect_image(image, crop = crop, count=count)
         img_array = np.array(r_image)
         return img,img_array
-        
+
+    def detect_all(self,dir_origin_path):
+        return self.run_all(dir_origin_path, self.model)
+
+    def run_all(self, dir_origin_path, model):
+        img_names = os.listdir(dir_origin_path)
+        dir_save_path = "img_out/"
+        for img_name in tqdm(img_names):
+            if img_name.lower().endswith(('.bmp', '.dib', '.png', '.jpg', '.jpeg', '.pbm', '.pgm', '.ppm', '.tif', '.tiff')):
+                image_path  = os.path.join(dir_origin_path, img_name)
+                image       = Image.open(image_path)
+                r_image     = self.model.detect_image(image)
+                if not os.path.exists(dir_save_path):
+                    os.makedirs(dir_save_path)
+                r_image.save(os.path.join(dir_save_path, img_name.replace(".jpg", ".png")), quality=95, subsampling=0)
+
     def myloadModelInitialize(self):
         yolo = YOLO()
         #----------------------------------------------------------------------------------------------------------#

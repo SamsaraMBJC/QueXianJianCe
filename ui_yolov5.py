@@ -606,12 +606,40 @@ class picture(QWidget):
                                                      border-style: outset;
                                                      font : 14px;}
                                                      ''')
-        btn1.move(10, 80)
+        btn1.move(110,30)#(10, 80)
         # print("QPushButton构建")
         btn1.clicked.connect(self.button1_test)
 
 
-
+        btn2 = QPushButton(self)
+        btn2.setText("批量检测指定文件夹内图片")
+        btn2.setStyleSheet(''' 
+                                                     QPushButton
+                                                     {text-align : center;
+                                                     background-color : white;
+                                                     font: bold;
+                                                     border-color: gray;
+                                                     border-width: 2px;
+                                                     border-radius: 10px;
+                                                     padding: 6px;
+                                                     height : 14px;
+                                                     border-style: outset;
+                                                     font : 14px;}
+                                                     QPushButton:pressed
+                                                     {text-align : center;
+                                                     background-color : light gray;
+                                                     font: bold;
+                                                     border-color: gray;
+                                                     border-width: 2px;
+                                                     border-radius: 10px;
+                                                     padding: 6px;
+                                                     height : 14px;
+                                                     border-style: outset;
+                                                     font : 14px;}
+                                                     ''')
+        btn2.move(410,30)
+        # print("QPushButton构建")
+        btn2.clicked.connect(self.opendir)
 
         btn3 = QPushButton(self)
         btn3.setText("视频和摄像头检测")
@@ -639,7 +667,7 @@ class picture(QWidget):
                                                      border-style: outset;
                                                      font : 14px;}
                                                      ''')
-        btn3.move(10, 160)
+        btn3.move(210, 30)#(10, 160)
         btn3.clicked.connect(self.camera_find)
 
         self.imgname1='0'
@@ -680,6 +708,15 @@ class picture(QWidget):
 
             # jpg = QtGui.QPixmap(imgName).scaled(self.label1.width(), self.label1.height())
             # self.label1.setPixmap(jpg)
+
+    def opendir(self):
+
+        dir = QFileDialog.getExistingDirectory(self, "选择文件夹", "c:/")
+        if dir!='':
+            print(dir)
+            self.myv5.detect_all(dir)
+            print('检测完成！')
+            QMessageBox.information(self, '祝贺', '恭喜，检测完成！', QMessageBox.Yes, QMessageBox.Yes)
 
 
     def button1_test(self):
