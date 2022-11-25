@@ -709,6 +709,7 @@ class picture(QWidget):
             # jpg = QtGui.QPixmap(imgName).scaled(self.label1.width(), self.label1.height())
             # self.label1.setPixmap(jpg)
 
+
     def opendir(self):
 
         dir = QFileDialog.getExistingDirectory(self, "选择文件夹", "c:/")
