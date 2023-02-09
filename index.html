@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- 头部的盒子 -->
+    <header>
+      <h1>智能风机缺陷检测平台V2.0——实时数据可视化展板</h1>
+      <div class="showTime"></div>
+      <script>
+        var t = null;// 格式： 当前时间：2020年3月17-0时54分14秒
+        t = setTimeout(time, 1000);//開始运行
+        function time() {
+          clearTimeout(t);//清除定时器
+          dt = new Date();
+          var y = dt.getFullYear();
+          var mt = dt.getMonth() + 1;
+          var day = dt.getDate();
+          var h = dt.getHours();//获取时
+          var m = dt.getMinutes();//获取分
+          var s = dt.getSeconds();//获取秒
+          document.querySelector(".showTime").innerHTML = '当前时间：' + y + "年" + mt + "月" + day + "日-" + h + "时" + m + "分" + s + "秒";
+          t = setTimeout(time, 1000); //设定定时器，循环运行     
+        }
+      </script>
+    </header>
+
+    <!-- 页面主体部分 -->
+    <section class="mainbox">
+      <div class="column">
+        <div class="panel fs">
+          <h2>实时风速统计(m/s)</h2>
+          <div class="chart"></div>
+          <div class="panel-footer">
+          </div>
+        </div>
+        <div class="panel zs">
+          <h2>实时发电机转速统计(每转分)</h2>
+          <div class="chart"></div>
+          <div class="panel-footer">
+          </div>
+        </div>
+        <div class="panel gl">
+          <h2>实时发电功率统计(kw)</h2>
+          <div class="chart"></div>
+          <div class="panel-footer">
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <!-- 风机模块 -->
+        <div class="map">
+          <div class="map1"></div>
+          <div class="map2"></div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="panel fs1">
+          <h2>实时风速(m/s)</h2>
+          <div class="chart"></div>
+          <div class="panel-footer">
+          </div>
+        </div>
+        <div class="panel zs1">
+          <h2>实时发电机转速(每转分)</h2>
+          <div class="chart"></div>
+          <div class="panel-footer">
+          </div>
+        </div>
+        <div class="panel gl1">
+          <h2>实时发电功率(kw)</h2>
+          <div class="chart"></div>
+          <div class="panel-footer">
+          </div>
+      </div>
+        
+    </section>
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min1.js"></script>
+    <script src="js/index1.js"></script>
+  </body>
+</html>

@@ -1,9 +1,0 @@
-import sys
-from PyQt5 import QtWidgets,QtCore
- 
-app = QtWidgets.QApplication(sys.argv)
-widget = QtWidgets.QWidget()
-widget.resize(360,400)
-widget.setWindowTitle("I love PyQt5!")
-widget.show()
-sys.exit(app.exec_())
